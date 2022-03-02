@@ -3,12 +3,12 @@ class App extends Component {
   render(){
     return (
       <div >
-      <div >
+      <div style={{textAlign:'center',textTransform:'uppercase',padding:20,backgroundColor:'black',color:'white'}}>
         Phone Directory 
       </div>
-      <button>Add</button>
+      {/* <button>Add</button>
       <span>Name</span><br/>
-      <span>Phone</span>
+      <span>Phone</span> */}
       </div>
     );
   }
