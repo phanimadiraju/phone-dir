@@ -4,24 +4,35 @@ import Header from './Header';
 
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      subscribersListToShow:[]
+    }
+    console.log("Constructor called")
+  }
+  componentDidMount(){
+    console.log("Component Did Mount called")
+  }
   
   render(){
-    let subscribers=[
-      { id:1,
-        name:'Phani',
-        phone:'9988776655'
-      },
-      { id:2,
-        name:'Kishore',
-        phone:'9988665544'
+    console.log("render called")
+    // let subscribers=[
+    //   { id:1,
+    //     name:'Phani',
+    //     phone:'9988776655'
+    //   },
+    //   { id:2,
+    //     name:'Kishore',
+    //     phone:'9988665544'
 
-      },
-      {
-        id:3,
-        name:'Abdul',
-        phone:'9977668855'
-      }
-    ]
+    //   },
+    //   {
+    //     id:3,
+    //     name:'Abdul',
+    //     phone:'9977668855'
+    //   }
+    // ]
     return (
       <div>
         <Header heading="Phone Directory"/>
@@ -33,7 +44,7 @@ class App extends Component {
           </div>
     </div>
     {
-      subscribers.map(sub =>{
+    this.state.subscribersListToShow.map(sub =>{
         return <div key={sub.id} className="grid-container">
           <span className='grid-item'>{sub.name}</span>
           <span className='grid-item'>{sub.phone}</span>
